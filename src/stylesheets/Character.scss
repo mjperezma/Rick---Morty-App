@@ -1,18 +1,36 @@
 .item {
+
+
   &__text {
     text-align: center;
+    background-color: rgb(60, 230, 230);
+    width: 100%;
+    border-radius: 20px;
   }
 
   &__list {
-    margin: 18px;
+    margin: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border: 2px solid rgb(80, 235, 80);
+    border-radius: 20px;
+    transition: all ease 1s;
+
+    &:hover {
+      box-shadow: 0 0 20px rgba(69, 232, 80, 2);
+      transform: scale(1.1);
+    }
 
 
     &--img {
       border-radius: 20px;
+      width: 250px;
+      height: auto;
+
     }
   }
+
+
 }

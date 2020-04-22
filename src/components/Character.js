@@ -2,7 +2,6 @@ import React from 'react';
 import '../stylesheets/Character.scss';
 
 const Character = (props) => {
-  console.log(props);
   return (
     <li className='item__list'>
       <img className='item__list--img' src={props.character.image} alt={props.character.name} />
