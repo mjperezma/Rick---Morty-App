@@ -1,0 +1,18 @@
+.item {
+  &__text {
+    text-align: center;
+  }
+
+  &__list {
+    margin: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    &--img {
+      border-radius: 20px;
+    }
+  }
+}

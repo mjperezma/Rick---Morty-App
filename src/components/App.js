@@ -3,6 +3,7 @@ import '../stylesheets/App.scss';
 import fetchRickyMorty from '../services/api';
 import Header from './Header';
 import CharacterList from './CharacterList';
+import FilterCharacters from './FilterCharacter';
 
 const App = () => {
   const [characters, setCharacters] = useState([]);
@@ -14,6 +15,7 @@ const App = () => {
   return (
     <div className='app__container'>
       <Header />
+      <FilterCharacters />
       <CharacterList characters={characters} />
     </div>
   );
