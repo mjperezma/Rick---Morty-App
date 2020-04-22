@@ -1,0 +1,14 @@
+.header__container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  &__title {
+    width: 300px;
+  }
+
+  &__logo {
+    width: 200px;
+    margin-top: 25px;
+  }
+}
