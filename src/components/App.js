@@ -34,13 +34,14 @@ const App = () => {
       return <CharacterDetail character={foundCharacter} />;
     }
   };
+
   return (
     <div className='app__container'>
       <Header />
 
       <Switch>
         <Route exact path='/'>
-          <Home characters={renderFilterCharacter} handleFilter={handleFilter} />
+          <Home characters={renderFilterCharacter} value={characterFilter} handleFilter={handleFilter} />
         </Route>
         <Route path='/character/:id' render={renderCharacterDetail} />
       </Switch>

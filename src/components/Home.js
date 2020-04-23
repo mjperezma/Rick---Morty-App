@@ -5,7 +5,7 @@ const Home = (props) => {
   return (
     <Fragment>
       <FilterCharacters handleFilter={props.handleFilter} />
-      <CharacterList characters={props.characters} />
+      <CharacterList characters={props.characters} value={props.value} />
     </Fragment>
   );
 };
