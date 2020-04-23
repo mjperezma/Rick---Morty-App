@@ -8,10 +8,13 @@ const FilterCharacters = (props) => {
       key: 'name',
     });
   };
+  const handleForm = (ev) => {
+    ev.preventDefault();
+  };
   return (
-    <form className='input__container'>
-      <label>¡Busca aquí tu personaje!</label>
-      <input type='text' placeholder='Escribe aquí' className='input__text' name='name' id='name' onChange={handleChange} />
+    <form className='input__container' onChange={handleForm}>
+      <label>¡Search here for your character!</label>
+      <input type='text' placeholder='Write here' className='input__text' name='name' id='name' onChange={handleChange} />
     </form>
   );
 };

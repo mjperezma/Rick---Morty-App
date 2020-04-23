@@ -1,13 +1,17 @@
 import React from 'react';
 import '../stylesheets/Character.scss';
+import {Link} from 'react-router-dom';
 
 const Character = (props) => {
+  const {image, name, spiece, id} = props.character;
   return (
-    <li className='item__list'>
-      <img className='item__list--img' src={props.character.image} alt={props.character.name} />
+    <li className='item__list' key={id}>
+      <img className='item__list--img' src={image} alt={`Foto de ${name}`} />
       <section className='item__text'>
-        <h3 className='item__list--name'>{props.character.name}</h3>
-        <p className='item__list--text'>{props.character.spiece}</p>
+        <Link to={`/character/${id}`}>
+          <h3 className='item__list--name'>{name}</h3>
+          <p className='item__list--text'>{spiece}</p>
+        </Link>
       </section>
     </li>
   );
