@@ -7,7 +7,6 @@ import {faArrowCircleLeft, faDizzy} from '@fortawesome/free-solid-svg-icons';
 const CharacterDetail = (props) => {
   const {image, name, status, spiece, origin, episode} = props.character;
   const dontExist = status === 'Dead' ? <FontAwesomeIcon icon={faDizzy} /> : ' ¡Your character is alive! ';
-
   return (
     <main className='container__main'>
       <div className='container__main__div'>

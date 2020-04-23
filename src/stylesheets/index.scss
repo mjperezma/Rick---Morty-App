@@ -19,4 +19,9 @@ html {
     display: flex;
     flex-direction: column;
   }
+
+  .container__article {
+    flex-direction: column;
+  }
+
 }
