@@ -8,6 +8,9 @@ const fetchRickyMorty = () => {
           name: character.name,
           spiece: character.species,
           image: character.image,
+          status: character.status,
+          episode: character.episode,
+          origin: character.origin.name,
         };
       });
     });

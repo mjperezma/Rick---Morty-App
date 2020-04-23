@@ -10,5 +10,10 @@
   &__logo {
     width: 200px;
     margin-top: 25px;
+    transition: all ease 5s;
+
+    &:hover {
+      transform: rotate(360deg);
+    }
   }
 }

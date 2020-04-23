@@ -1,0 +1,45 @@
+.container__main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+
+  & a {
+    text-decoration: none;
+
+  }
+
+  &__link {
+    color: white;
+  }
+}
+
+
+.container__article {
+  background-color: rgb(49, 188, 219);
+  width: 700px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 0 20px;
+
+  &--img {
+    margin: 20px;
+    border-radius: 10%;
+    border: solid 10px #4de645;
+
+  }
+
+}
+
+
+.container__section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 15px;
+
+}
