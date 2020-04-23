@@ -4,7 +4,7 @@ import FilterCharacters from './FilterCharacter';
 const Home = (props) => {
   return (
     <Fragment>
-      <FilterCharacters handleFilter={props.handleFilter} />
+      <FilterCharacters handleFilter={props.handleFilter} value={props.value} />
       <CharacterList characters={props.characters} value={props.value} />
     </Fragment>
   );

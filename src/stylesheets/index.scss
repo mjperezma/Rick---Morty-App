@@ -2,16 +2,21 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  text-transform: capitalize;
 
 
 }
 
-body {
+html {
   background: url('../images/dark.jpg') center center;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
 
+@media all and (max-width: 480px) {
 
+  .header__container {
+    display: flex;
+    flex-direction: column;
+  }
 }

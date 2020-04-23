@@ -3,6 +3,10 @@
   font-family: 'Baloo Bhaina 2',
     cursive;
   color: white;
-  font-weight: bold;
   font-size: 18px;
+
+  &--text {
+    text-align: center;
+  }
+
 }

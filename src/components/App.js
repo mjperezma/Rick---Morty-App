@@ -27,10 +27,11 @@ const App = () => {
   });
 
   const renderCharacterDetail = (props) => {
-    console.log(props);
     const characterId = parseInt(props.match.params.id);
     const foundCharacter = characters.find((character) => character.id === characterId);
-    if (foundCharacter !== undefined) {
+    if (foundCharacter === undefined) {
+      return <p className='app__container--text'>This character doesn't exist</p>;
+    } else {
       return <CharacterDetail character={foundCharacter} />;
     }
   };

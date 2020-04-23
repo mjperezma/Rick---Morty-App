@@ -5,11 +5,11 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faFrown} from '@fortawesome/free-solid-svg-icons';
 
 const CharacterList = (props) => {
-  console.log(props);
   const dontExist =
     props.characters.length === 0 ? (
       <h2 className='item__container--text'>
-        This character: {props.value} doesn't exist <FontAwesomeIcon icon={faFrown} /> Try again!
+        This character: {props.value} doesn't exist.
+        <FontAwesomeIcon icon={faFrown} /> Try again!
       </h2>
     ) : (
       ''
