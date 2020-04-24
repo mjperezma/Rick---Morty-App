@@ -26,6 +26,11 @@ const App = () => {
     return character.name.toUpperCase().includes(characterFilter.toUpperCase());
   });
 
+  console.log(renderFilterCharacter);
+  // const sortNames = characters.sort((a, b) => {
+
+  // })
+
   const renderCharacterDetail = (props) => {
     const characterId = parseInt(props.match.params.id);
     const foundCharacter = characters.find((character) => character.id === characterId);
