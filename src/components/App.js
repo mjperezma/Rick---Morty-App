@@ -26,9 +26,12 @@ const App = () => {
     return character.name.toUpperCase().includes(characterFilter.toUpperCase());
   });
 
-  // const sortNames = characters.sort((a, b) => {
-
-  // });
+  const sortNames = characters.sort((a, b) => {
+    if (a.name > b.name) return 1;
+    if (a.name < b.name) return -1;
+    return 0;
+  });
+  // console.log(sortNames);
 
   const renderCharacterDetail = (props) => {
     const characterId = parseInt(props.match.params.id);
@@ -45,7 +48,7 @@ const App = () => {
       <Header />
       <Switch>
         <Route exact path='/'>
-          <Home characters={renderFilterCharacter} value={characterFilter} handleFilter={handleFilter} />
+          <Home characters={renderFilterCharacter} sortNames={sortNames} value={characterFilter} handleFilter={handleFilter} />
         </Route>
         <Route path='/character/:id' render={renderCharacterDetail} />
       </Switch>
