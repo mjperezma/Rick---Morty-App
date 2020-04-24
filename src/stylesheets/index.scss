@@ -8,6 +8,7 @@
 
 html {
   background: url('../images/dark.jpg') center center;
+  background-color: black;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -20,8 +21,5 @@ html {
     flex-direction: column;
   }
 
-  .container__article {
-    flex-direction: column;
-  }
 
 }
