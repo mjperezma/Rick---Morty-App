@@ -1,6 +1,7 @@
 import React from 'react';
-import Character from './Character';
+import CharacterCard from './CharacterCard';
 import '../stylesheets/CharacterLlist.scss';
+import PropTypes from 'prop-types';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faFrown} from '@fortawesome/free-solid-svg-icons';
 
@@ -16,17 +17,21 @@ const CharacterList = (props) => {
     );
 
   return (
-    <section>
+    <>
       {dontExist}
       <ul className='item__container'>
         {props.characters.map((character) => (
           <li key={character.id}>
-            <Character character={character} />
+            <CharacterCard character={character} />
           </li>
         ))}
       </ul>
-    </section>
+    </>
   );
+};
+
+CharacterList.propTypes = {
+  characters: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default CharacterList;

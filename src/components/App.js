@@ -31,7 +31,6 @@ const App = () => {
     if (a.name < b.name) return -1;
     return 0;
   });
-  // console.log(sortNames);
 
   const renderCharacterDetail = (props) => {
     const characterId = parseInt(props.match.params.id);

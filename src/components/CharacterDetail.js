@@ -1,18 +1,40 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import PropTypes from 'prop-types';
 import '../stylesheets/CharacterDetail.scss';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faArrowCircleLeft, faDizzy, faUserAlt, faPastafarianism} from '@fortawesome/free-solid-svg-icons';
+import {faArrowCircleLeft, faDizzy, faUserAlt, faHeartbeat} from '@fortawesome/free-solid-svg-icons';
 
 const CharacterDetail = (props) => {
   const {image, name, status, spiece, origin, episode} = props.character;
-  const dontExist = status === 'Dead' ? <FontAwesomeIcon icon={faDizzy} /> : ' ¡Your character is alive!';
-  const alienOrHuman = spiece === 'Human' ? <FontAwesomeIcon icon={faUserAlt} /> : <FontAwesomeIcon icon={faPastafarianism} />;
+  const dontExist =
+    status === 'Dead' ? (
+      <span className='icon__div'>
+        Dead
+        <FontAwesomeIcon className='icon__dead' icon={faDizzy} />
+      </span>
+    ) : (
+      <span>
+        Alive
+        <FontAwesomeIcon className='icon__heart' icon={faHeartbeat} />
+      </span>
+    );
+  const alienOrHuman =
+    spiece === 'Human' ? (
+      <span>
+        Human
+        <FontAwesomeIcon className='icon__human' icon={faUserAlt} />
+      </span>
+    ) : (
+      <span>
+        Alien <i className='fab fa-reddit-alien icon__alien'></i>
+      </span>
+    );
   return (
     <main className='container__main'>
       <div className='container__main__div'>
         <Link to='/' className='container__main__link'>
-          <p> Return to the starting box!</p>
+          <h3> Return to the starting box!</h3>
           <span>
             <FontAwesomeIcon icon={faArrowCircleLeft} />
           </span>
@@ -20,16 +42,19 @@ const CharacterDetail = (props) => {
       </div>
       <article className='container__article'>
         <img src={image} alt={name} className='container__article--img' />
-        <section className='container__section'>
-          <h3 className='container__section--name'>Name: {name}</h3>
-          <p className='container__section--text'>State: {dontExist}</p>
-          <p className='container__section--text'>Spiece: {alienOrHuman}</p>
-          <p className='container__section--text'>Episodes: {episode.length}</p>
-          <p className='container__section--text'>Origin: {origin}</p>
-        </section>
+        <ul className='container__section'>
+          <li className='container__section--name'>Name: {name}</li>
+          <li className='container__section--text'>State: {dontExist}</li>
+          <li className='container__section--text'>Spiece: {alienOrHuman}</li>
+          <li className='container__section--text'>Episodes: {episode.length}</li>
+          <li className='container__section--text'>Origin: {origin}</li>
+        </ul>
       </article>
     </main>
   );
 };
 
+CharacterDetail.propTypes = {
+  character: PropTypes.object,
+};
 export default CharacterDetail;

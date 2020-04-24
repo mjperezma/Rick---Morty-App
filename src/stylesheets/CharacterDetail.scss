@@ -18,7 +18,7 @@
 }
 
 .container__article {
-  background-color: rgb(49, 188, 219);
+  background-color: rgb(28, 158, 187);
   width: auto;
   height: auto;
   display: flex;
@@ -26,6 +26,7 @@
   align-items: center;
   border-radius: 5px;
   margin: 0px 0 30px 0;
+
 
   &--img {
     margin: 20px 50px;
@@ -35,11 +36,26 @@
   }
 }
 
+.icon {
+
+  &__heart {
+    margin-left: 5px;
+    font-size: 22px;
+  }
+
+  &__alien {
+    color: #4de645;
+    font-size: 25px;
+  }
+
+  &__human {
+    margin-left: 5px;
+  }
+}
+
 .container__section {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  padding: 15px;
+  padding-right: 40px;
+  list-style: none;
 
 }
 

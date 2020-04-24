@@ -6,11 +6,18 @@
     margin: 30px 0;
   }
 
+  &__label {
+    font-weight: bold;
+    font-size: 22px;
+  }
+
   &__text {
 
     padding: 15px;
-    border-radius: 10px;
+    border-radius: 8px;
     width: 300px;
+    margin-top: 15px;
+    border: solid 4px rgb(28, 158, 187);
 
   }
 }

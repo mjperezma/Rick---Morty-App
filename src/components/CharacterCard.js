@@ -1,8 +1,9 @@
 import React from 'react';
 import '../stylesheets/Character.scss';
+import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
 
-const Character = (props) => {
+const CharacterCard = (props) => {
   const {image, name, spiece, id} = props.character;
 
   return (
@@ -18,4 +19,7 @@ const Character = (props) => {
   );
 };
 
-export default Character;
+CharacterCard.propTypes = {
+  character: PropTypes.object,
+};
+export default CharacterCard;

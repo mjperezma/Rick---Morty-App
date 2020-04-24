@@ -1,5 +1,6 @@
 import React, {Fragment} from 'react';
 import CharacterList from './CharacterList';
+import PropTypes from 'prop-types';
 import FilterCharacters from './FilterCharacter';
 const Home = (props) => {
   return (
@@ -10,4 +11,9 @@ const Home = (props) => {
   );
 };
 
+Home.propTypes = {
+  characters: PropTypes.arrayOf(PropTypes.object).isRequired,
+  value: PropTypes.string,
+  handleFilter: PropTypes.func,
+};
 export default Home;

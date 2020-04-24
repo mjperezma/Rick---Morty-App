@@ -7,11 +7,12 @@
 }
 
 html {
-  background: url('../images/dark.jpg') center center;
+  background: url('../images/dark.jpg');
   background-color: black;
-  background-size: cover;
+  // background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  background-size: auto;
 }
 
 @media all and (max-width: 480px) {
