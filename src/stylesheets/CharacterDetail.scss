@@ -60,9 +60,17 @@
 }
 
 @media all and (max-width:480px) {
+  .container__section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 20px;
+  }
+
   .container__article {
     flex-direction: column;
     margin-bottom: 20px;
+    padding-bottom: 18px;
 
     &--img {
       margin: 20px;

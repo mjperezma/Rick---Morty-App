@@ -43,11 +43,11 @@ const CharacterDetail = (props) => {
       <article className='container__article'>
         <img src={image} alt={name} className='container__article--img' />
         <ul className='container__section'>
-          <li className='container__section--name'>Name: {name}</li>
-          <li className='container__section--text'>State: {dontExist}</li>
-          <li className='container__section--text'>Spiece: {alienOrHuman}</li>
-          <li className='container__section--text'>Episodes: {episode.length}</li>
-          <li className='container__section--text'>Origin: {origin}</li>
+          <li>Name: {name}</li>
+          <li>State: {dontExist}</li>
+          <li>Spiece: {alienOrHuman}</li>
+          <li>Episodes: {episode.length}</li>
+          <li>Origin: {origin}</li>
         </ul>
       </article>
     </main>

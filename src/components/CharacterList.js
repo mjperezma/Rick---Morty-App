@@ -10,7 +10,7 @@ const CharacterList = (props) => {
     props.characters.length === 0 ? (
       <h2 className='item__container--text'>
         This character: {props.value} doesn't exist.
-        <FontAwesomeIcon icon={faFrown} /> Try again!
+        <FontAwesomeIcon icon={faFrown} />
       </h2>
     ) : (
       ''
